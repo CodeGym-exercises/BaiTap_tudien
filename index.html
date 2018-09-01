@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Từ điển</title>
+</head>
+<body>
+	<h1>Từ điển Anh - Việt</h1>
+	<script type="text/javascript">
+		alert("Từ điển chỉ có chức năng dịch từ anh -> việt")
+		let input = "";
+		let eng = ["hello","i","make up","book","pencil","junger"];
+		let viet = ["Xin chào","Tôi","Trang điểm","Sách","Bút chì","Rừng"];
+		while(true){
+			input = prompt("Nhập vào từ cần tìm kiếm (exit để thoát)");
+			if(input=="exit"){
+				break;
+			}
+			let temp = false,flag=0;
+			for(let i = 0;i<eng.length;i++){
+				if(input===eng[i]||input.toLowerCase()===eng[i])
+				{
+					temp=true;
+					flag=i;
+					break;
+				}
+			}
+			if(temp){
+				alert("Từ cần tìm là "+ viet[flag]);
+			}else{
+				alert("Từ nhập vào không đúng, xin kiểm tra lại ");
+			}			
+		}
+	</script>
+</body>
+</html>
